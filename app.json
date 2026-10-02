@@ -1,25 +1,44 @@
 {
   "expo": {
-    "name": "wichat-rn",
+    "name": "WIChat",
     "slug": "wichat-rn",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "scheme": "wichat",
     "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
+    "newArchEnabled": false,
+    "jsEngine": "hermes",
+    "splash": { "backgroundColor": "#E0E5EC", "resizeMode": "contain" },
+    "assetBundlePatterns": ["**/*"],
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+      "package": "com.wichat.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.CHANGE_WIFI_STATE",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA"
+      ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "ios": { "bundleIdentifier": "com.wichat.app", "supportsTablet": true },
+    "plugins": [
+      "expo-dev-client",
+      "expo-secure-store",
+      "expo-av",
+      ["expo-build-properties", {
+        "android": {
+          "gradleVersion": "8.10.2"
+        }
+      }]
+    ],
+    "updates": { "url": "https://u.expo.dev/27c78439-a573-404d-b544-fea266227e39" },
+    "runtimeVersion": { "policy": "appVersion" },
+    "extra": { "eas": { "projectId": "27c78439-a573-404d-b544-fea266227e39" } }
   }
 }
